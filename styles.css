@@ -1,0 +1,22 @@
+body {
+    font-family: 'Roboto', 'Fira Code', 'Monospace';
+    width: 200px;
+    background-color: #0f0f0f;
+}
+
+.contenedor{
+    background-color: #131212ec;
+    color: #f1ebebfb;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Volume Control",
+    "version": "1.0",
+    "description": "Controla el volumen de cualquier pestaña.",
+    "permissions": ["tabs", "activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/ico-1-16.png",
+        "48": "icons/ico-1-48.png",
+        "128": "icons/ico-1-128.png"
+      }
+    }
+  }
