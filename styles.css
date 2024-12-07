@@ -28,6 +28,7 @@ body {
     
 }
 .window-buttons img {
+    height: 21px;
     cursor: pointer;
 }
 
