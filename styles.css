@@ -1,14 +1,41 @@
 body {
     font-family: 'Roboto', 'Fira Code', 'Monospace';
     width: 200px;
-    background-color: #0f0f0f;
+    background-color: rgba(59, 130, 246, 0.5);
 }
 
-.contenedor{
-    background-color: #131212ec;
-    color: #f1ebebfb;
-    padding: 1rem;
+.contenedor {
+    color: #000000fb;
+    padding: 0.1rem 0.3rem;
     border-radius: 10px;
+    animation: borderAnimation 5s infinite;
+    /* Añade la animación */
+    position: relative;
+}
+
+.window-buttons {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.window-buttons img {
+    cursor: pointer;
+}
+
+.volumen-main {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+.volumen-main svg {
+    margin-right: 10px;
 }
 
 h1 {
@@ -18,5 +45,65 @@ h1 {
 
 input[type="range"] {
     width: 100%;
+    border: 2px solid #ccc;
+    /* Añade un borde al input */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    -webkit-appearance: none;
+    /* Elimina el estilo predeterminado */
+    height: 8px;
+    /* Altura del control deslizante */
+    outline: none;
+    /* Elimina el borde de enfoque */
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#volumeOff {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: #ccc;
+    }
+
+    25% {
+        border-color: #ff0000;
+    }
+
+    50% {
+        border-color: #00ff00;
+    }
+
+    75% {
+        border-color: #0000ff;
+    }
+
+    100% {
+        border-color: #ccc;
+    }
+}

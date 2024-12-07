@@ -7,9 +7,40 @@
 
 <body>
     <div class="contenedor">
+        <div class="window-buttons">
+            <img src="assets/window_buttons_dark.svg" alt="Window Buttons">
+        </div>
         <h1>Control de Volumen</h1>
-        <input type="range" id="volumeSlider" min="0" max="100" value="100">
-        <script src="popup.js"></script>
+
+        <div class="volumen-main">
+            <!-- Contenedor clickeable para SVG -->
+            <div id="volumeIcon" class="clickable">
+                <!-- svg con volumen -->
+                <svg id="volumeOn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-music">
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                </svg>
+
+                <!-- svg sin volumen -->
+                <svg id="volumeOff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-headphone-off">
+                    <path d="M21 14h-1.343" />
+                    <path d="M9.128 3.47A9 9 0 0 1 21 12v3.343" />
+                    <path d="m2 2 20 20" />
+                    <path d="M20.414 20.414A2 2 0 0 1 19 21h-1a2 2 0 0 1-2-2v-3" />
+                    <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 2.636-6.364" />
+                </svg>
+            </div>
+            <input type="range" id="volumeSlider" min="0" max="100" value="100">
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
     </div>
 </body>
 
